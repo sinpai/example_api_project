@@ -9,12 +9,12 @@ describe 'user tests' do
 
   it 'user with invalid email should be invalid' do
     user = User.new(email: 'test', password_digest: 'test')
-    assert_not user.valid? 
+    assert !user.valid? 
   end
 
   it 'user with taken email should be invalid' do
-    other_user = users(:one)
+    other_user = User.create(email: 'one@one.org', password_digest: 'hashed_password')
     user = User.new(email: other_user.email, password_digest: 'test')
-    assert_not user.valid? 
+    assert !user.valid? 
   end
 end
