@@ -45,3 +45,5 @@ gem "bcrypt", "~> 3.1"
 gem "jwt", "~> 2.4"
 
 gem "pry", "~> 0.14.1"
+
+gem "faker", "~> 2.21"
